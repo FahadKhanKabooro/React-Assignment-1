@@ -4,6 +4,8 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { IoIosAddCircleOutline } from 'react-icons/io';
 import { AiTwotoneStar } from 'react-icons/ai';
 import { FcStart } from 'react-icons/fc';
+import { AiTwotoneEdit } from 'react-icons/ai';
+import { AiFillDelete} from 'react-icons/ai';
 
 
 
@@ -129,8 +131,8 @@ this.setState({})
                                 <li  key={i}  className='text-black shadow-lg p-3 bg-lightblue'>
                               <i><FcStart/></i>
                                 {v.title}
-                              <button className='btn btn-primary' onClick={()=>this.edit(i)}>edit</button>
-                              <button onClick={()=>this.dlete(i)}>delete</button>
+                              <button className='btn btn-primary' onClick={()=>this.edit(i)}><AiTwotoneEdit/></button>
+                              <button className='btn btn-warning' onClick={()=>this.dlete(i)}><AiFillDelete/></button>
 
                             </li>
 
@@ -143,8 +145,8 @@ this.setState({})
                                 <li  key={i} >
                             <i><FcStart/></i> 
                             <input type="text" value={v.title} onChange={(e)=>this.setnewtext(e.target.value,i)} />
-                            <button className='btn btn-warning' onClick={()=>this.update(i)}>update</button>
-                            <button  onClick={()=>this.dlete(i)}>delete</button>
+                            <button className='btn btn-warning' onClick={()=>this.update(i)}><AiTwotoneEdit/></button>
+                            <button className='btn btn-warning' onClick={()=>this.dlete(i)}><AiFillDelete/></button>
 
                           </li> 
                              
